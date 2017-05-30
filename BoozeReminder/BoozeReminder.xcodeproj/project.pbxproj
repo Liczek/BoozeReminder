@@ -15,6 +15,8 @@
 		C83960B71EDDE19C00CC97A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */; };
 		C83960C21EDDE19C00CC97A7 /* BoozeReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960C11EDDE19C00CC97A7 /* BoozeReminderTests.swift */; };
 		C83960CD1EDDE19C00CC97A7 /* BoozeReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960CC1EDDE19C00CC97A7 /* BoozeReminderUITests.swift */; };
+		C8FF4A271EDE07EC0024DE58 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */; };
+		C8FF4A291EDE110A0024DE58 /* BeerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF4A281EDE110A0024DE58 /* BeerCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C83960C81EDDE19C00CC97A7 /* BoozeReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoozeReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83960CC1EDDE19C00CC97A7 /* BoozeReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeReminderUITests.swift; sourceTree = "<group>"; };
 		C83960CE1EDDE19C00CC97A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8FF4A281EDE110A0024DE58 /* BeerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				C83960A91EDDE19C00CC97A7 /* AppDelegate.swift */,
 				C83960AB1EDDE19C00CC97A7 /* ViewController.swift */,
 				C83960AD1EDDE19C00CC97A7 /* Main.storyboard */,
+				C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */,
+				C8FF4A281EDE110A0024DE58 /* BeerCollectionView.swift */,
 				C83960B31EDDE19C00CC97A7 /* Assets.xcassets */,
 				C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */,
 				C83960B81EDDE19C00CC97A7 /* Info.plist */,
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FF4A271EDE07EC0024DE58 /* BeerCollectionViewCell.swift in Sources */,
 				C83960B21EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld in Sources */,
 				C83960AC1EDDE19C00CC97A7 /* ViewController.swift in Sources */,
 				C83960AA1EDDE19C00CC97A7 /* AppDelegate.swift in Sources */,
+				C8FF4A291EDE110A0024DE58 /* BeerCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +526,7 @@
 				C83960D31EDDE19C00CC97A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C83960D41EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +535,7 @@
 				C83960D61EDDE19C00CC97A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C83960D71EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +544,7 @@
 				C83960D91EDDE19C00CC97A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
