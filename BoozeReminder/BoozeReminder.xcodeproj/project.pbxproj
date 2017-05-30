@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C83960AA1EDDE19C00CC97A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960A91EDDE19C00CC97A7 /* AppDelegate.swift */; };
+		C83960AC1EDDE19C00CC97A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960AB1EDDE19C00CC97A7 /* ViewController.swift */; };
+		C83960AF1EDDE19C00CC97A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83960AD1EDDE19C00CC97A7 /* Main.storyboard */; };
+		C83960B21EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C83960B01EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld */; };
+		C83960B41EDDE19C00CC97A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83960B31EDDE19C00CC97A7 /* Assets.xcassets */; };
+		C83960B71EDDE19C00CC97A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */; };
+		C83960C21EDDE19C00CC97A7 /* BoozeReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960C11EDDE19C00CC97A7 /* BoozeReminderTests.swift */; };
+		C83960CD1EDDE19C00CC97A7 /* BoozeReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83960CC1EDDE19C00CC97A7 /* BoozeReminderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C83960BE1EDDE19C00CC97A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C839609E1EDDE19B00CC97A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C83960A51EDDE19B00CC97A7;
+			remoteInfo = BoozeReminder;
+		};
+		C83960C91EDDE19C00CC97A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C839609E1EDDE19B00CC97A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C83960A51EDDE19B00CC97A7;
+			remoteInfo = BoozeReminder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C83960A61EDDE19C00CC97A7 /* BoozeReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoozeReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83960A91EDDE19C00CC97A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C83960AB1EDDE19C00CC97A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C83960AE1EDDE19C00CC97A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C83960B11EDDE19C00CC97A7 /* BoozeReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoozeReminder.xcdatamodel; sourceTree = "<group>"; };
+		C83960B31EDDE19C00CC97A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C83960B61EDDE19C00CC97A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C83960B81EDDE19C00CC97A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83960BD1EDDE19C00CC97A7 /* BoozeReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoozeReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83960C11EDDE19C00CC97A7 /* BoozeReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeReminderTests.swift; sourceTree = "<group>"; };
+		C83960C31EDDE19C00CC97A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83960C81EDDE19C00CC97A7 /* BoozeReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoozeReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83960CC1EDDE19C00CC97A7 /* BoozeReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeReminderUITests.swift; sourceTree = "<group>"; };
+		C83960CE1EDDE19C00CC97A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C83960A31EDDE19B00CC97A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960BA1EDDE19C00CC97A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960C51EDDE19C00CC97A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C839609D1EDDE19B00CC97A7 = {
+			isa = PBXGroup;
+			children = (
+				C83960A81EDDE19C00CC97A7 /* BoozeReminder */,
+				C83960C01EDDE19C00CC97A7 /* BoozeReminderTests */,
+				C83960CB1EDDE19C00CC97A7 /* BoozeReminderUITests */,
+				C83960A71EDDE19C00CC97A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C83960A71EDDE19C00CC97A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C83960A61EDDE19C00CC97A7 /* BoozeReminder.app */,
+				C83960BD1EDDE19C00CC97A7 /* BoozeReminderTests.xctest */,
+				C83960C81EDDE19C00CC97A7 /* BoozeReminderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C83960A81EDDE19C00CC97A7 /* BoozeReminder */ = {
+			isa = PBXGroup;
+			children = (
+				C83960A91EDDE19C00CC97A7 /* AppDelegate.swift */,
+				C83960AB1EDDE19C00CC97A7 /* ViewController.swift */,
+				C83960AD1EDDE19C00CC97A7 /* Main.storyboard */,
+				C83960B31EDDE19C00CC97A7 /* Assets.xcassets */,
+				C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */,
+				C83960B81EDDE19C00CC97A7 /* Info.plist */,
+				C83960B01EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld */,
+			);
+			path = BoozeReminder;
+			sourceTree = "<group>";
+		};
+		C83960C01EDDE19C00CC97A7 /* BoozeReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C83960C11EDDE19C00CC97A7 /* BoozeReminderTests.swift */,
+				C83960C31EDDE19C00CC97A7 /* Info.plist */,
+			);
+			path = BoozeReminderTests;
+			sourceTree = "<group>";
+		};
+		C83960CB1EDDE19C00CC97A7 /* BoozeReminderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C83960CC1EDDE19C00CC97A7 /* BoozeReminderUITests.swift */,
+				C83960CE1EDDE19C00CC97A7 /* Info.plist */,
+			);
+			path = BoozeReminderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C83960A51EDDE19B00CC97A7 /* BoozeReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C83960D11EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminder" */;
+			buildPhases = (
+				C83960A21EDDE19B00CC97A7 /* Sources */,
+				C83960A31EDDE19B00CC97A7 /* Frameworks */,
+				C83960A41EDDE19B00CC97A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoozeReminder;
+			productName = BoozeReminder;
+			productReference = C83960A61EDDE19C00CC97A7 /* BoozeReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C83960BC1EDDE19C00CC97A7 /* BoozeReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C83960D41EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderTests" */;
+			buildPhases = (
+				C83960B91EDDE19C00CC97A7 /* Sources */,
+				C83960BA1EDDE19C00CC97A7 /* Frameworks */,
+				C83960BB1EDDE19C00CC97A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C83960BF1EDDE19C00CC97A7 /* PBXTargetDependency */,
+			);
+			name = BoozeReminderTests;
+			productName = BoozeReminderTests;
+			productReference = C83960BD1EDDE19C00CC97A7 /* BoozeReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C83960C71EDDE19C00CC97A7 /* BoozeReminderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C83960D71EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderUITests" */;
+			buildPhases = (
+				C83960C41EDDE19C00CC97A7 /* Sources */,
+				C83960C51EDDE19C00CC97A7 /* Frameworks */,
+				C83960C61EDDE19C00CC97A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C83960CA1EDDE19C00CC97A7 /* PBXTargetDependency */,
+			);
+			name = BoozeReminderUITests;
+			productName = BoozeReminderUITests;
+			productReference = C83960C81EDDE19C00CC97A7 /* BoozeReminderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C839609E1EDDE19B00CC97A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Paweł Liczmański";
+				TargetAttributes = {
+					C83960A51EDDE19B00CC97A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DBAJNSTG63;
+						ProvisioningStyle = Automatic;
+					};
+					C83960BC1EDDE19C00CC97A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DBAJNSTG63;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C83960A51EDDE19B00CC97A7;
+					};
+					C83960C71EDDE19C00CC97A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DBAJNSTG63;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C83960A51EDDE19B00CC97A7;
+					};
+				};
+			};
+			buildConfigurationList = C83960A11EDDE19B00CC97A7 /* Build configuration list for PBXProject "BoozeReminder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C839609D1EDDE19B00CC97A7;
+			productRefGroup = C83960A71EDDE19C00CC97A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C83960A51EDDE19B00CC97A7 /* BoozeReminder */,
+				C83960BC1EDDE19C00CC97A7 /* BoozeReminderTests */,
+				C83960C71EDDE19C00CC97A7 /* BoozeReminderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C83960A41EDDE19B00CC97A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83960B71EDDE19C00CC97A7 /* LaunchScreen.storyboard in Resources */,
+				C83960B41EDDE19C00CC97A7 /* Assets.xcassets in Resources */,
+				C83960AF1EDDE19C00CC97A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960BB1EDDE19C00CC97A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960C61EDDE19C00CC97A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C83960A21EDDE19B00CC97A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83960B21EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld in Sources */,
+				C83960AC1EDDE19C00CC97A7 /* ViewController.swift in Sources */,
+				C83960AA1EDDE19C00CC97A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960B91EDDE19C00CC97A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83960C21EDDE19C00CC97A7 /* BoozeReminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83960C41EDDE19C00CC97A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83960CD1EDDE19C00CC97A7 /* BoozeReminderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C83960BF1EDDE19C00CC97A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C83960A51EDDE19B00CC97A7 /* BoozeReminder */;
+			targetProxy = C83960BE1EDDE19C00CC97A7 /* PBXContainerItemProxy */;
+		};
+		C83960CA1EDDE19C00CC97A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C83960A51EDDE19B00CC97A7 /* BoozeReminder */;
+			targetProxy = C83960C91EDDE19C00CC97A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C83960AD1EDDE19C00CC97A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C83960AE1EDDE19C00CC97A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C83960B61EDDE19C00CC97A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C83960CF1EDDE19C00CC97A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C83960D01EDDE19C00CC97A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C83960D21EDDE19C00CC97A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C83960D31EDDE19C00CC97A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C83960D51EDDE19C00CC97A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoozeReminder.app/BoozeReminder";
+			};
+			name = Debug;
+		};
+		C83960D61EDDE19C00CC97A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoozeReminder.app/BoozeReminder";
+			};
+			name = Release;
+		};
+		C83960D81EDDE19C00CC97A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BoozeReminder;
+			};
+			name = Debug;
+		};
+		C83960D91EDDE19C00CC97A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DBAJNSTG63;
+				INFOPLIST_FILE = BoozeReminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelliczmanski.BoozeReminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BoozeReminder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C83960A11EDDE19B00CC97A7 /* Build configuration list for PBXProject "BoozeReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83960CF1EDDE19C00CC97A7 /* Debug */,
+				C83960D01EDDE19C00CC97A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C83960D11EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83960D21EDDE19C00CC97A7 /* Debug */,
+				C83960D31EDDE19C00CC97A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C83960D41EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83960D51EDDE19C00CC97A7 /* Debug */,
+				C83960D61EDDE19C00CC97A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C83960D71EDDE19C00CC97A7 /* Build configuration list for PBXNativeTarget "BoozeReminderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83960D81EDDE19C00CC97A7 /* Debug */,
+				C83960D91EDDE19C00CC97A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C83960B01EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C83960B11EDDE19C00CC97A7 /* BoozeReminder.xcdatamodel */,
+			);
+			currentVersion = C83960B11EDDE19C00CC97A7 /* BoozeReminder.xcdatamodel */;
+			path = BoozeReminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C839609E1EDDE19B00CC97A7 /* Project object */;
+}
