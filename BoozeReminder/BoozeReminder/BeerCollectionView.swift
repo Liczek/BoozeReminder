@@ -35,7 +35,7 @@ extension BeerCollectionView {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "beerBottle", for: indexPath) as! BeerCollectionViewCell
         
-        cell.mainNameLabel.text = "Beer nr \(indexPath.row)"
+        cell.mainNameLabel.text = "Very good Beer nr \(indexPath.row)"
         //cell.aditionalNameLabel.text = "no aditional text"
         cell.bottleImage.image = #imageLiteral(resourceName: "bottle_brown")
         cell.beerLogoImage.image = #imageLiteral(resourceName: "Carlsberg")

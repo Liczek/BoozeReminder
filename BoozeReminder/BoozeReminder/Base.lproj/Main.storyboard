@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -162,38 +161,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" placeholderIntrinsicWidth="73" placeholderIntrinsicHeight="188" image="bottle_brown" translatesAutoresizingMaskIntoConstraints="NO" id="kME-w8-juW">
-                                            <rect key="frame" x="117" y="12" width="73" height="188"/>
+                                            <rect key="frame" x="5" y="8" width="73" height="191"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="kME-w8-juW" secondAttribute="height" multiplier="73:191" id="rO7-hi-rS9"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-Dn-raQ">
-                                            <rect key="frame" x="10" y="12" width="128" height="59"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="200" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="test zwezania tekstu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-Dn-raQ">
+                                            <rect key="frame" x="81" y="13" width="108" height="64.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="PBK-ri-8Om"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Carlsberg" translatesAutoresizingMaskIntoConstraints="NO" id="abm-K1-XK3">
-                                            <rect key="frame" x="127" y="79" width="54" height="101"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="abm-K1-XK3" secondAttribute="height" multiplier="54:101" id="6Fh-DX-HBy"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Carlsberg" translatesAutoresizingMaskIntoConstraints="NO" id="abm-K1-XK3">
+                                            <rect key="frame" x="15" y="68" width="54" height="101"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="QbS-Dn-raQ" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leadingMargin" constant="2" id="29G-nG-VNa"/>
-                                    <constraint firstItem="vyk-Pl-Urd" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="top" id="4WQ-UG-v5r"/>
-                                    <constraint firstItem="vyk-Pl-Urd" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leading" id="4tL-ik-h1D"/>
-                                    <constraint firstItem="abm-K1-XK3" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="topMargin" constant="71" id="G7s-Ti-5as"/>
-                                    <constraint firstAttribute="trailing" secondItem="vyk-Pl-Urd" secondAttribute="trailing" id="HDr-fu-UtY"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="QbS-Dn-raQ" secondAttribute="bottom" constant="121" id="MYc-Ct-pcf"/>
-                                    <constraint firstItem="kME-w8-juW" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="topMargin" constant="4" id="N74-He-NhZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="vyk-Pl-Urd" secondAttribute="bottom" id="Qhe-pL-odX"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="abm-K1-XK3" secondAttribute="trailing" constant="11" id="RpC-yW-zqb"/>
-                                    <constraint firstItem="kME-w8-juW" firstAttribute="width" secondItem="fSa-w1-7yy" secondAttribute="height" multiplier="73:200" id="Ztf-Yz-ap1"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="kME-w8-juW" secondAttribute="trailing" constant="2" id="bG4-sq-KS9"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="QbS-Dn-raQ" secondAttribute="trailing" constant="54" id="chO-nb-bcj"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="abm-K1-XK3" secondAttribute="bottom" constant="12" id="ePk-6I-X0y"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="kME-w8-juW" secondAttribute="bottom" constant="-8" id="i3b-qk-BVk"/>
-                                    <constraint firstItem="QbS-Dn-raQ" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="topMargin" constant="4" id="rZW-AT-cht"/>
+                                    <constraint firstAttribute="trailing" secondItem="QbS-Dn-raQ" secondAttribute="trailing" constant="11" id="4bn-DH-k5A"/>
+                                    <constraint firstItem="QbS-Dn-raQ" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="top" constant="13" id="8Ac-73-2IR"/>
+                                    <constraint firstAttribute="bottom" secondItem="kME-w8-juW" secondAttribute="bottom" constant="1" id="F7W-EE-lUB"/>
+                                    <constraint firstItem="vyk-Pl-Urd" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="top" id="Ool-df-wFz"/>
+                                    <constraint firstItem="vyk-Pl-Urd" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leading" id="PeK-xp-ZKO"/>
+                                    <constraint firstAttribute="bottom" secondItem="vyk-Pl-Urd" secondAttribute="bottom" id="QB5-sB-9gi"/>
+                                    <constraint firstItem="kME-w8-juW" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leading" constant="5" id="TEg-Kx-a2J"/>
+                                    <constraint firstAttribute="trailing" secondItem="vyk-Pl-Urd" secondAttribute="trailing" id="bAP-rh-UjD"/>
+                                    <constraint firstItem="kME-w8-juW" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="top" constant="8" id="dzm-mX-hRH"/>
+                                    <constraint firstItem="QbS-Dn-raQ" firstAttribute="leading" secondItem="kME-w8-juW" secondAttribute="trailing" constant="3" id="eKi-xG-bCs"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="backImage" destination="vyk-Pl-Urd" id="VWQ-mw-DDN"/>
