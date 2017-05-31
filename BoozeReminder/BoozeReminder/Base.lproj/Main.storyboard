@@ -139,7 +139,7 @@
         <scene sceneID="Fqi-Hh-f3T">
             <objects>
                 <collectionViewController id="bfB-CN-R9X" customClass="BeerCollectionView" customModule="BoozeReminder" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" dataMode="prototypes" id="icZ-0q-zcO">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="prototypes" id="icZ-0q-zcO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,9 +175,8 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Carlsberg" translatesAutoresizingMaskIntoConstraints="NO" id="abm-K1-XK3">
-                                            <rect key="frame" x="15" y="68" width="54" height="101"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Carlsberg" translatesAutoresizingMaskIntoConstraints="NO" id="abm-K1-XK3">
+                                            <rect key="frame" x="14" y="59" width="55" height="133"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -189,9 +188,13 @@
                                     <constraint firstItem="vyk-Pl-Urd" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leading" id="PeK-xp-ZKO"/>
                                     <constraint firstAttribute="bottom" secondItem="vyk-Pl-Urd" secondAttribute="bottom" id="QB5-sB-9gi"/>
                                     <constraint firstItem="kME-w8-juW" firstAttribute="leading" secondItem="fSa-w1-7yy" secondAttribute="leading" constant="5" id="TEg-Kx-a2J"/>
+                                    <constraint firstItem="abm-K1-XK3" firstAttribute="top" secondItem="kME-w8-juW" secondAttribute="top" constant="51" id="Tx9-2D-Ne4"/>
+                                    <constraint firstItem="abm-K1-XK3" firstAttribute="trailing" secondItem="kME-w8-juW" secondAttribute="trailing" constant="-9" id="UuA-le-WG8"/>
+                                    <constraint firstItem="abm-K1-XK3" firstAttribute="bottom" secondItem="kME-w8-juW" secondAttribute="bottom" constant="-7" id="YaS-UA-WCw"/>
                                     <constraint firstAttribute="trailing" secondItem="vyk-Pl-Urd" secondAttribute="trailing" id="bAP-rh-UjD"/>
                                     <constraint firstItem="kME-w8-juW" firstAttribute="top" secondItem="fSa-w1-7yy" secondAttribute="top" constant="8" id="dzm-mX-hRH"/>
                                     <constraint firstItem="QbS-Dn-raQ" firstAttribute="leading" secondItem="kME-w8-juW" secondAttribute="trailing" constant="3" id="eKi-xG-bCs"/>
+                                    <constraint firstItem="abm-K1-XK3" firstAttribute="leading" secondItem="kME-w8-juW" secondAttribute="leading" constant="9" id="xUC-jY-M1X"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="backImage" destination="vyk-Pl-Urd" id="VWQ-mw-DDN"/>
