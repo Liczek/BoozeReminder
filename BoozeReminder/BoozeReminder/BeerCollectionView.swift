@@ -14,8 +14,9 @@ class BeerCollectionView: UICollectionViewController {
         super.viewDidLoad()
         
         let width = collectionView!.frame.width / 3
+        let height = (collectionView!.frame.height - 75) / 4
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)        
+        layout.itemSize = CGSize(width: width, height: height)
     }
     
     
@@ -28,16 +29,16 @@ extension BeerCollectionView {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 15
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "beerBottle", for: indexPath) as! BeerCollectionViewCell
         
         cell.mainNameLabel.text = "Beer nr \(indexPath.row)"
-        cell.aditionalNameLabel.text = "no aditional text"
+        //cell.aditionalNameLabel.text = "no aditional text"
         cell.bottleImage.image = #imageLiteral(resourceName: "bottle_brown")
-        cell.beerLogoImage.image = #imageLiteral(resourceName: "Chang")
+        cell.beerLogoImage.image = #imageLiteral(resourceName: "Carlsberg")
         cell.backImage.image = #imageLiteral(resourceName: "skrzynka")
         
         return cell
