@@ -82,12 +82,15 @@
                                     <constraint firstAttribute="height" constant="40" id="mkU-bo-qFj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-zY-po1">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-zY-po1">
                                 <rect key="frame" x="10" y="398" width="300" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="GUD-D0-Fca"/>
                                 </constraints>
-                                <state key="normal" title="photoButton"/>
+                                <state key="normal" title="button"/>
+                                <connections>
+                                    <action selector="pickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6TT-zn-QKe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booze Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-Sc-9ia">
                                 <rect key="frame" x="40" y="30.5" width="240" height="20.5"/>
@@ -209,11 +212,41 @@
                             <outlet property="delegate" destination="bfB-CN-R9X" id="PDv-ZN-QR4"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Collection Name" id="C66-ET-Pe4"/>
+                    <navigationItem key="navigationItem" title="Collection Name" id="C66-ET-Pe4">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="hpi-kn-Td8"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r5-we-Tag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119.375" y="134.1549295774648"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="iyD-SA-ev4">
+            <objects>
+                <tableViewController id="RBh-OV-k7P" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8bD-3N-H5C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VCj-rf-YrY">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCj-rf-YrY" id="qeD-by-IBb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RBh-OV-k7P" id="6Im-9i-aU9"/>
+                            <outlet property="delegate" destination="RBh-OV-k7P" id="N6i-M2-sz6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SE4-ys-VpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qvW-oo-o2M">

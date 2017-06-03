@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class BeerCollectionView: UICollectionViewController {
     
+    var fetchResultController: NSFetchedResultsController<Beer>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let width = collectionView!.frame.width / 3
         let height = (collectionView!.frame.height - 75) / 4
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: height)
+        
+        
+        let addBeerButton = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: #selector(addCategoryAlert))
+        navigationItem.rightBarButtonItem = addBeerButton
+        
+        }
+    
+    func addCategoryAlert() {
+        
+        print("test")
     }
     
     
@@ -43,4 +57,19 @@ extension BeerCollectionView {
         
         return cell
     }
+}
+
+extension BeerCollectionView {
+    func popView() {
+        let beerAlertController = UIAlertController(title: "Enter name of new beer", message: nil, preferredStyle: .alert)
+        let beerSaveAlert = UIAlertAction(title: "Save", style: .default) { (action) in
+            
+        }
+        let beerCancelAlert = UIAlertAction(title: "Cancel", style: .cancel)
+        beerAlertController.addAction(beerSaveAlert)
+        beerAlertController.addAction(beerCancelAlert)
+        present(beerAlertController, animated: true, completion: nil)
+    }
+    
+    
 }
