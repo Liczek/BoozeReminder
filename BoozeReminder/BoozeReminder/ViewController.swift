@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var beerImage: UIImage?
+    
     @IBOutlet weak var bcgImage: UIImageView!
     @IBOutlet weak var appNameImage: UIImageView!
     @IBOutlet weak var beersButton: UIButton!
@@ -20,6 +22,11 @@ class ViewController: UIViewController {
     @IBAction func pickImageButton(_ sender: UIButton) {
         pickPhoto()
     }
+    
+    @IBAction func vodkasCollection(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToEditBooze", sender: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +38,17 @@ class ViewController: UIViewController {
         photoButton.tintColor = UIColor.white
         photoButton.imageView?.contentMode = .scaleAspectFit
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        vodkasButton.autoresizesSubviews = false
+        vodkasButton.contentMode = .scaleAspectFit
+        if (beerImage != nil) {
+        vodkasButton.setBackgroundImage(beerImage, for: .normal)
+        } else {
+            vodkasButton.setBackgroundImage(#imageLiteral(resourceName: "Chang"), for: .normal)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,9 +58,6 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController {
-    
-}
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -87,12 +102,41 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        
+        beerImage = image
+        
+        }
+        
+//        guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "goToEditBooze") as? EditBoozeViewController else {
+//            print("Could not instantiate view controller with identifier of type SecondViewController")
+//            return
+//        }
+//        
+//        self.navigationController?.pushViewController(vc, animated:true)
+        dismiss(animated: true, completion: goToEditMode)
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func goToEditMode() {
+        performSegue(withIdentifier: "goToEditBooze", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToEditBooze" {
+            let vc = segue.destination as! UINavigationController
+            let controller = vc.viewControllers[0]  as! EditBoozeViewController
+            controller.boozeImage = beerImage
+        }
+    }
+    
+    
+    
+    
     
 }
 
