@@ -118,7 +118,7 @@ extension EditBoozeViewController {
         let saveBoozeNameAlert = UIAlertAction(title: "Save", style: .default) { (action) in
             self.boozeName = setBoozeNameAlertController.textFields?[0].text
             self.boozeID = Date().timeIntervalSince1970
-            self.saveBooze(boozeName: self.boozeName!, boozeID: self.boozeID!)
+            self.saveBooze(boozeName: self.boozeName!, boozeID: self.boozeID!, boozeImage: self.boozeImage!)
             self.reloadBoozeNameRow()
         }
         let cancelBoozeNameAlert = UIAlertAction(title: "Cancel", style: .default) { (action) in
@@ -146,7 +146,7 @@ extension EditBoozeViewController {
     }
     
     
-    func saveBooze(boozeName: String, boozeID: Double) {
+    func saveBooze(boozeName: String, boozeID: Double, boozeImage: UIImage) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -154,8 +154,12 @@ extension EditBoozeViewController {
         let booze = Booze(entity: Booze.entity(), insertInto: managementObjectContext)
         booze.boozeName = self.boozeName
         booze.id = self.boozeID!
-        print(String(booze.id))
-        
+        guard let boozeConvertedImage = UIImageJPEGRepresentation(self.boozeImage!, 0.7) else {
+            print("\(boozeName) error with image")
+            return
+        }
+        booze.boozeImage = boozeConvertedImage as NSData?
+            
         do {
             try managementObjectContext.save()
         } catch let error as NSError {

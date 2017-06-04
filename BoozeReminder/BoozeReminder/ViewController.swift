@@ -118,25 +118,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true, completion: nil)
     }
     
-    func prepareImageForSaving(image: UIImage) {
         
-        // unique ID
-        let date: Double = NSDate().timeIntervalSince1970
-        
-        guard let imageData = UIImageJPEGRepresentation(image, 1) else {
-            print("Error with saving HighQuality Photo")
-            return
-        }
-        
-        guard let lowQualityImage = UIImageJPEGRepresentation(image, 0.7) else {
-            print("Error lowQualityImage creation")
-            return
-        }
-    }
-    
-    
-    
-    
     func goToEditMode() {
         performSegue(withIdentifier: "goToEditBooze", sender: nil)
     }

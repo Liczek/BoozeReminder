@@ -67,6 +67,8 @@ class CheckCoreDataTableViewController: UITableViewController {
         cell.boozNameLabel.text = booze.boozeName
         cell.boozIDLabel.text = String(booze.id)
         
+        cell.boozImage.image = UIImage(data: booze.boozeImage as! Data, scale: 0.7)
+        
         
         // Configure the cell...
         
