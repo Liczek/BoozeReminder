@@ -23,7 +23,7 @@ class BeerCollectionView: UICollectionViewController {
         layout.itemSize = CGSize(width: width, height: height)
         
         
-        let addBeerButton = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: #selector(addCategoryAlert))
+        let addBeerButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategoryAlert))
         navigationItem.rightBarButtonItem = addBeerButton
         
         }

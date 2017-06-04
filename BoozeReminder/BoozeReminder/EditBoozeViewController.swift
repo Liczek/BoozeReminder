@@ -21,6 +21,8 @@ class EditBoozeViewController: UIViewController {
         tableView.delegate = self
 
         title = "Edit Your Booze"
+        let back = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismissEditView))
+        self.navigationItem.setLeftBarButton(back, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,6 +137,9 @@ extension EditBoozeViewController {
     func reloadBoozeNameRow() {
         let indexPath = IndexPath(row: 1, section: 0)
         tableView.reloadRows(at: [indexPath], with: .top)
+    }
+    func dismissEditView() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
