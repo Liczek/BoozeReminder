@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     var beerImage: UIImage?
+    var fetchResultController: NSFetchedResultsController<Booze>!
     
     @IBOutlet weak var bcgImage: UIImageView!
     @IBOutlet weak var appNameImage: UIImageView!
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func vodkasCollection(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToEditBooze", sender: nil)
+        
     }
     
 
@@ -41,13 +43,13 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        vodkasButton.autoresizesSubviews = false
+       /* vodkasButton.autoresizesSubviews = false
         vodkasButton.contentMode = .scaleAspectFit
         if (beerImage != nil) {
         vodkasButton.setBackgroundImage(beerImage, for: .normal)
         } else {
             vodkasButton.setBackgroundImage(#imageLiteral(resourceName: "Chang"), for: .normal)
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,14 +108,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         beerImage = image
         
+            
         }
-        
-//        guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "goToEditBooze") as? EditBoozeViewController else {
-//            print("Could not instantiate view controller with identifier of type SecondViewController")
-//            return
-//        }
-//        
-//        self.navigationController?.pushViewController(vc, animated:true)
         dismiss(animated: true, completion: goToEditMode)
         
     }
@@ -121,6 +117,25 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func prepareImageForSaving(image: UIImage) {
+        
+        // unique ID
+        let date: Double = NSDate().timeIntervalSince1970
+        
+        guard let imageData = UIImageJPEGRepresentation(image, 1) else {
+            print("Error with saving HighQuality Photo")
+            return
+        }
+        
+        guard let lowQualityImage = UIImageJPEGRepresentation(image, 0.7) else {
+            print("Error lowQualityImage creation")
+            return
+        }
+    }
+    
+    
+    
     
     func goToEditMode() {
         performSegue(withIdentifier: "goToEditBooze", sender: nil)

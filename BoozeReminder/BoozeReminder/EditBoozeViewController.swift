@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class EditBoozeViewController: UIViewController {
     
     var tableView: UITableView!
     var boozeImage: UIImage?
     var boozeName: String?
-    
+    var fetchResultController: NSFetchedResultsController<Booze>!
     
     
     override func viewDidLoad() {
@@ -115,7 +116,7 @@ extension EditBoozeViewController {
         setBoozeNameAlertController.addTextField()
         let saveBoozeNameAlert = UIAlertAction(title: "Save", style: .default) { (action) in
             self.boozeName = setBoozeNameAlertController.textFields?[0].text
-            
+            self.saveBooze(boozeName: self.boozeName!)
             self.reloadBoozeNameRow()
         }
         let cancelBoozeNameAlert = UIAlertAction(title: "Cancel", style: .default) { (action) in
@@ -138,9 +139,44 @@ extension EditBoozeViewController {
         let indexPath = IndexPath(row: 1, section: 0)
         tableView.reloadRows(at: [indexPath], with: .top)
     }
-    func dismissEditView() {
+    public func dismissEditView() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func saveBooze(boozeName: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managementObjectContext = appDelegate.persistentContainer.viewContext
+        let booze = Booze(entity: Booze.entity(), insertInto: managementObjectContext)
+        booze.boozeName = self.boozeName
+        
+        do {
+            try managementObjectContext.save()
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
+    func reloadDataAfterFetch() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let fetchRequest: NSFetchRequest<Booze> = Booze.fetchRequest()
+        let nameSortDescriptor = NSSortDescriptor(key: "boozeName", ascending: true)
+        fetchRequest.sortDescriptors = [nameSortDescriptor]
+        fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.persistentContainer.viewContext, sectionNameKeyPath: #keyPath(Booze.boozeName), cacheName: nil)
+        
+        do {
+            try fetchResultController.performFetch()
+        } catch let error as NSError {
+            print("Error with fetching boozeName \(error)")
+        }
+    }
+    
+    
 }
 
 

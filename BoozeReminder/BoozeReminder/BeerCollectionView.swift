@@ -11,7 +11,7 @@ import CoreData
 
 class BeerCollectionView: UICollectionViewController {
     
-    var fetchResultController: NSFetchedResultsController<Beer>!
+    var fetchResultController: NSFetchedResultsController<Booze>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,7 @@ class BeerCollectionView: UICollectionViewController {
         }
     
     func addCategoryAlert() {
-        
-        print("test")
+        performSegue(withIdentifier: "checkCoreData", sender: nil)
     }
     
     

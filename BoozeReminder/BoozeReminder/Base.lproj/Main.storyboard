@@ -219,10 +219,41 @@
                     <navigationItem key="navigationItem" title="Collection Name" id="C66-ET-Pe4">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="hpi-kn-Td8"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ZMt-vs-s4t" kind="show" identifier="checkCoreData" id="kQO-EY-itB"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r5-we-Tag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119.375" y="134.1549295774648"/>
+        </scene>
+        <!--Check Core Data Table View Controller-->
+        <scene sceneID="WWn-Pr-BNF">
+            <objects>
+                <tableViewController id="ZMt-vs-s4t" customClass="CheckCoreDataTableViewController" customModule="BoozeReminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g2Q-dN-C4D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coreDataVeryficationCell" id="Uoo-AZ-afH">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uoo-AZ-afH" id="iKt-Of-bFw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZMt-vs-s4t" id="b6q-tW-y6w"/>
+                            <outlet property="delegate" destination="ZMt-vs-s4t" id="qVZ-cU-nK4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hm-fW-JZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="-25"/>
         </scene>
         <!--name-->
         <scene sceneID="2b5-c2-Lkh">
