@@ -17,5 +17,6 @@ extension Booze {
     }
 
     @NSManaged public var boozeName: String?
+    @NSManaged public var id: Double
 
 }

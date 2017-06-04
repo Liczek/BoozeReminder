@@ -62,12 +62,14 @@ class CheckCoreDataTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "coreDataVeryficationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "coreDataVeryficationCell", for: indexPath) as! CheckCoreDataTableViewCell
         let booze = fetchResultController.object(at: indexPath)
-        cell.textLabel?.text = booze.boozeName
-
+        cell.boozNameLabel.text = booze.boozeName
+        cell.boozIDLabel.text = String(booze.id)
+        
+        
         // Configure the cell...
-
+        
         return cell
     }
     

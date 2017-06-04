@@ -20,6 +20,7 @@
 		C83E449B1EE466A500E7F75B /* Booze+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E44991EE466A500E7F75B /* Booze+CoreDataClass.swift */; };
 		C83E449C1EE466A500E7F75B /* Booze+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E449A1EE466A500E7F75B /* Booze+CoreDataProperties.swift */; };
 		C83E449E1EE4756800E7F75B /* CheckCoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E449D1EE4756800E7F75B /* CheckCoreDataTableViewController.swift */; };
+		C83E44A01EE48C3C00E7F75B /* CheckCoreDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E449F1EE48C3C00E7F75B /* CheckCoreDataTableViewCell.swift */; };
 		C877908A1EE367A500C9AE32 /* EditBoozeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87790891EE367A500C9AE32 /* EditBoozeViewController.swift */; };
 		C877908D1EE3686000C9AE32 /* EditBoozeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877908B1EE3686000C9AE32 /* EditBoozeTableViewCell.swift */; };
 		C8FF4A271EDE07EC0024DE58 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */; };
@@ -63,6 +64,7 @@
 		C83E44991EE466A500E7F75B /* Booze+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Booze+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C83E449A1EE466A500E7F75B /* Booze+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Booze+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C83E449D1EE4756800E7F75B /* CheckCoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCoreDataTableViewController.swift; sourceTree = "<group>"; };
+		C83E449F1EE48C3C00E7F75B /* CheckCoreDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCoreDataTableViewCell.swift; sourceTree = "<group>"; };
 		C87790891EE367A500C9AE32 /* EditBoozeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBoozeViewController.swift; sourceTree = "<group>"; };
 		C877908B1EE3686000C9AE32 /* EditBoozeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBoozeTableViewCell.swift; sourceTree = "<group>"; };
 		C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				C8FF4A281EDE110A0024DE58 /* BeerCollectionView.swift */,
 				C8FF4A261EDE07EC0024DE58 /* BeerCollectionViewCell.swift */,
 				C83E449D1EE4756800E7F75B /* CheckCoreDataTableViewController.swift */,
+				C83E449F1EE48C3C00E7F75B /* CheckCoreDataTableViewCell.swift */,
 				C83960B31EDDE19C00CC97A7 /* Assets.xcassets */,
 				C83960B51EDDE19C00CC97A7 /* LaunchScreen.storyboard */,
 				C83960B81EDDE19C00CC97A7 /* Info.plist */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FF4A271EDE07EC0024DE58 /* BeerCollectionViewCell.swift in Sources */,
+				C83E44A01EE48C3C00E7F75B /* CheckCoreDataTableViewCell.swift in Sources */,
 				C83E449E1EE4756800E7F75B /* CheckCoreDataTableViewController.swift in Sources */,
 				C83960B21EDDE19C00CC97A7 /* BoozeReminder.xcdatamodeld in Sources */,
 				C877908A1EE367A500C9AE32 /* EditBoozeViewController.swift in Sources */,

@@ -231,18 +231,50 @@
         <scene sceneID="WWn-Pr-BNF">
             <objects>
                 <tableViewController id="ZMt-vs-s4t" customClass="CheckCoreDataTableViewController" customModule="BoozeReminder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g2Q-dN-C4D">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="g2Q-dN-C4D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coreDataVeryficationCell" id="Uoo-AZ-afH">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coreDataVeryficationCell" rowHeight="88" id="Uoo-AZ-afH" customClass="CheckCoreDataTableViewCell" customModule="BoozeReminder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uoo-AZ-afH" id="iKt-Of-bFw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-b5-5Po">
+                                            <rect key="frame" x="8" y="8" width="44" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-4a-Ox8">
+                                            <rect key="frame" x="8" y="40" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-mQ-R07">
+                                            <rect key="frame" x="152" y="8" width="140" height="71"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oq6-4a-Ox8" firstAttribute="leading" secondItem="iKt-Of-bFw" secondAttribute="leading" constant="8" id="Fja-Rn-R8j"/>
+                                        <constraint firstAttribute="bottom" secondItem="oq6-4a-Ox8" secondAttribute="bottom" constant="29" id="SDc-Vb-XJo"/>
+                                        <constraint firstItem="lq1-mQ-R07" firstAttribute="leading" secondItem="nfX-b5-5Po" secondAttribute="trailing" constant="100" id="YaU-nh-axa"/>
+                                        <constraint firstItem="nfX-b5-5Po" firstAttribute="top" secondItem="iKt-Of-bFw" secondAttribute="top" constant="8" id="ahm-ZG-2NR"/>
+                                        <constraint firstItem="nfX-b5-5Po" firstAttribute="leading" secondItem="iKt-Of-bFw" secondAttribute="leading" constant="8" id="lVh-4m-sCT"/>
+                                        <constraint firstAttribute="trailing" secondItem="lq1-mQ-R07" secondAttribute="trailing" constant="28" id="tR2-hJ-s8I"/>
+                                        <constraint firstAttribute="bottom" secondItem="lq1-mQ-R07" secondAttribute="bottom" constant="8" id="vRH-J1-p1d"/>
+                                        <constraint firstItem="lq1-mQ-R07" firstAttribute="top" secondItem="iKt-Of-bFw" secondAttribute="top" constant="8" id="vYe-1q-0x6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="boozIDLabel" destination="oq6-4a-Ox8" id="YEg-1r-597"/>
+                                    <outlet property="boozImage" destination="lq1-mQ-R07" id="Zed-89-zox"/>
+                                    <outlet property="boozNameLabel" destination="nfX-b5-5Po" id="5P3-cX-aO0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -253,7 +285,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hm-fW-JZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="-25"/>
+            <point key="canvasLocation" x="2220" y="-25.35211267605634"/>
         </scene>
         <!--name-->
         <scene sceneID="2b5-c2-Lkh">

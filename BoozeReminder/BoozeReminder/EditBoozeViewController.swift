@@ -14,6 +14,7 @@ class EditBoozeViewController: UIViewController {
     var tableView: UITableView!
     var boozeImage: UIImage?
     var boozeName: String?
+    var boozeID: Double?
     var fetchResultController: NSFetchedResultsController<Booze>!
     
     
@@ -116,7 +117,8 @@ extension EditBoozeViewController {
         setBoozeNameAlertController.addTextField()
         let saveBoozeNameAlert = UIAlertAction(title: "Save", style: .default) { (action) in
             self.boozeName = setBoozeNameAlertController.textFields?[0].text
-            self.saveBooze(boozeName: self.boozeName!)
+            self.boozeID = Date().timeIntervalSince1970
+            self.saveBooze(boozeName: self.boozeName!, boozeID: self.boozeID!)
             self.reloadBoozeNameRow()
         }
         let cancelBoozeNameAlert = UIAlertAction(title: "Cancel", style: .default) { (action) in
@@ -144,13 +146,15 @@ extension EditBoozeViewController {
     }
     
     
-    func saveBooze(boozeName: String) {
+    func saveBooze(boozeName: String, boozeID: Double) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         let managementObjectContext = appDelegate.persistentContainer.viewContext
         let booze = Booze(entity: Booze.entity(), insertInto: managementObjectContext)
         booze.boozeName = self.boozeName
+        booze.id = self.boozeID!
+        print(String(booze.id))
         
         do {
             try managementObjectContext.save()
