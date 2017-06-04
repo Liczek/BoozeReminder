@@ -12,6 +12,8 @@ class EditBoozeViewController: UIViewController {
     
     var tableView: UITableView!
     var boozeImage: UIImage?
+    var boozeName: String?
+    
     
     
     override func viewDidLoad() {
@@ -19,6 +21,11 @@ class EditBoozeViewController: UIViewController {
         tableView.delegate = self
 
         title = "Edit Your Booze"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
 }
@@ -44,12 +51,16 @@ extension EditBoozeViewController: UITableViewDataSource {
             }
             cell = cell0
         } else if indexPath.section == 0 && indexPath.row == 1 {
-            let cell1 = tableView.dequeueReusableCell(withIdentifier: "boozeNameCell", for: indexPath)
-            cell1.detailTextLabel?.text = "Unnamed"
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "boozeNameCell", for: indexPath) as! BoozeNameTableViewCell
+            if boozeName != nil  {
+            cell1.boozeNameLabel.text = boozeName
+            } else {
+                cell1.boozeNameLabel.text = "Set name of Booze"
+            }
             cell = cell1
         } else if indexPath.section == 0 && indexPath.row == 2 {
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: "boozeDetailsCell", for: indexPath)
-            cell2.detailTextLabel?.text = "More details about this Booze"
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "boozeDetailsCell", for: indexPath) as! BoozeDetailsTableViewCell
+            cell2.moreBoozeDetailLabel.text = "More details about this Booze"
             cell = cell2
         }       
         return cell
@@ -72,5 +83,75 @@ extension EditBoozeViewController: UITableViewDataSource {
 }
 
 extension EditBoozeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+           
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            setBoozeNameAlert()
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        var returnValue: IndexPath?
+        if indexPath.section == 0 && indexPath.row == 0 {
+            returnValue = nil
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            returnValue = indexPath
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            returnValue = indexPath
+        }
+        return returnValue
+    }
 }
+
+extension EditBoozeViewController {
+    func setBoozeNameAlert() {
+        let setBoozeNameAlertController = UIAlertController(title: "Set Booze Name", message: "Chose Booze Category", preferredStyle: .alert)
+        setBoozeNameAlertController.addTextField()
+        let saveBoozeNameAlert = UIAlertAction(title: "Save", style: .default) { (action) in
+            self.boozeName = setBoozeNameAlertController.textFields?[0].text
+            
+            self.reloadBoozeNameRow()
+        }
+        let cancelBoozeNameAlert = UIAlertAction(title: "Cancel", style: .default) { (action) in
+            
+        }
+        let resignFromAddingBoozeAlert = UIAlertAction(title: "Resign form new Booze", style: .destructive) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        setBoozeNameAlertController.textFields?[0].placeholder = "Enter new Booze name"
+        setBoozeNameAlertController.addAction(saveBoozeNameAlert)
+        setBoozeNameAlertController.addAction(cancelBoozeNameAlert)
+        setBoozeNameAlertController.addAction(resignFromAddingBoozeAlert)
+        
+        present(setBoozeNameAlertController, animated: true, completion: nil)
+        
+    }
+    
+    func reloadBoozeNameRow() {
+        let indexPath = IndexPath(row: 1, section: 0)
+        tableView.reloadRows(at: [indexPath], with: .top)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
