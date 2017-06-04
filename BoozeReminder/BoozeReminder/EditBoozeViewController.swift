@@ -39,6 +39,7 @@ extension EditBoozeViewController: UITableViewDataSource {
             let cell0 = tableView.dequeueReusableCell(withIdentifier: "boozeCell", for: indexPath) as! EditBoozeTableViewCell
             if (boozeImage != nil) {
                 cell0.bottleImage.image = #imageLiteral(resourceName: "bottle_brown")
+                cell0.boozeImageView.contentMode = .scaleAspectFit
                 cell0.boozeImageView.image = boozeImage
             }
             cell = cell0
@@ -52,6 +53,21 @@ extension EditBoozeViewController: UITableViewDataSource {
             cell = cell2
         }       
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var rowHeight = CGFloat()
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let rowHeight0 = 400
+            rowHeight = CGFloat(rowHeight0)
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            let rowHeight1 = 40
+            rowHeight = CGFloat(rowHeight1)
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            let rowHeight2 = 40
+            rowHeight = CGFloat(rowHeight2)
+        }
+        return rowHeight
     }
 }
 

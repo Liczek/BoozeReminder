@@ -241,7 +241,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boozeCell" rowHeight="395" id="cah-03-Cbw" customClass="EditBeerCollectionViewCell" customModule="BoozeReminder" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boozeCell" rowHeight="395" id="cah-03-Cbw" customClass="EditBoozeTableViewCell" customModule="BoozeReminder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="395"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cah-03-Cbw" id="7dN-2y-9Hz">
@@ -263,6 +263,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="eMV-kS-pQA" secondAttribute="trailing" constant="105" id="YDu-5d-VVp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="boozeImageView" destination="eMV-kS-pQA" id="Gpl-Ek-e35"/>
+                                            <outlet property="bottleImage" destination="ulL-LE-Vib" id="Di3-pP-tY0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boozeNameCell" rowHeight="42" id="oYg-Nn-eBf" customClass="BoozeNameTableViewCell" customModule="BoozeReminder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="423" width="320" height="42"/>

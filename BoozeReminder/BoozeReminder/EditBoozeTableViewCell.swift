@@ -13,7 +13,6 @@ class EditBoozeTableViewCell: UITableViewCell {
     @IBOutlet weak var boozeImageView: UIImageView!
     @IBOutlet weak var bottleImage: UIImageView!
     
-    
 
     
 
