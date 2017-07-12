@@ -128,7 +128,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             let vc = segue.destination as! UINavigationController
             let controller = vc.viewControllers[0]  as! EditBoozeViewController
             controller.boozeImage = beerImage
-        }
+        } 
     }
     
     

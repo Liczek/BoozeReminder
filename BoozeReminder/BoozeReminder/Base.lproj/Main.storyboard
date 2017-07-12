@@ -173,8 +173,8 @@
                                                 <constraint firstAttribute="width" secondItem="kME-w8-juW" secondAttribute="height" multiplier="73:191" id="rO7-hi-rS9"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="200" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="test zwezania tekstu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-Dn-raQ">
-                                            <rect key="frame" x="81" y="13" width="108" height="64.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="200" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="test zwezania tekstu" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-Dn-raQ">
+                                            <rect key="frame" x="81" y="13" width="108" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="PBK-ri-8Om"/>
                                             </constraints>
@@ -208,6 +208,7 @@
                                     <outlet property="beerLogoImage" destination="abm-K1-XK3" id="0yO-dJ-D1J"/>
                                     <outlet property="bottleImage" destination="kME-w8-juW" id="mqY-1v-OaJ"/>
                                     <outlet property="mainNameLabel" destination="QbS-Dn-raQ" id="eHN-JE-ohI"/>
+                                    <segue destination="TYs-T3-oLl" kind="presentation" identifier="goAndEditSelectedBooze" id="eT1-Da-1GQ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -437,4 +438,7 @@
         <image name="bottle_brown" width="1098" height="2940"/>
         <image name="skrzynka" width="357" height="357"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eT1-Da-1GQ"/>
+    </inferredMetricsTieBreakers>
 </document>

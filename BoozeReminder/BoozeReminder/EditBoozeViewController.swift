@@ -16,11 +16,12 @@ class EditBoozeViewController: UIViewController {
     var boozeName: String?
     var boozeID: Double?
     var fetchResultController: NSFetchedResultsController<Booze>!
-    
+    var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
+        
 
         title = "Edit Your Booze"
         let back = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismissEditView))
@@ -29,7 +30,9 @@ class EditBoozeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        let selectedBooze = fetchResultController.object(at: indexPath as IndexPath)
+        let xxx = selectedBooze.boozeName
+        print(xxx ?? "no index")
     }
     
 }

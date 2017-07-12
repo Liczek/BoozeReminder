@@ -12,10 +12,11 @@ import CoreData
 class BeerCollectionView: UICollectionViewController {
     
     var fetchResultController: NSFetchedResultsController<Booze>!
+    var boozeName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        reloadDataAfterFetch()
         
         let width = collectionView!.frame.width / 3
         let height = (collectionView!.frame.height - 75) / 4
@@ -38,20 +39,21 @@ class BeerCollectionView: UICollectionViewController {
 
 extension BeerCollectionView {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return fetchResultController.sections?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return fetchResultController.sections?[section].numberOfObjects ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "beerBottle", for: indexPath) as! BeerCollectionViewCell
+        let booze = fetchResultController.object(at: indexPath)
         
-        cell.mainNameLabel.text = "Very good Beer nr \(indexPath.row)"
+        cell.mainNameLabel.text = booze.boozeName
         //cell.aditionalNameLabel.text = "no aditional text"
         cell.bottleImage.image = #imageLiteral(resourceName: "bottle_brown")
-        cell.beerLogoImage.image = #imageLiteral(resourceName: "Carlsberg")
+        cell.beerLogoImage.image = UIImage(data: booze.boozeImage as! Data, scale: 0.7)
         cell.backImage.image = #imageLiteral(resourceName: "skrzynka")
         
         return cell
@@ -70,5 +72,40 @@ extension BeerCollectionView {
         present(beerAlertController, animated: true, completion: nil)
     }
     
+    func reloadDataAfterFetch() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let fetchRequest: NSFetchRequest<Booze> = Booze.fetchRequest()
+        let nameSortDescriptor = NSSortDescriptor(key: "boozeName", ascending: true)
+        fetchRequest.sortDescriptors = [nameSortDescriptor]
+        fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.persistentContainer.viewContext, sectionNameKeyPath: #keyPath(Booze.boozeName), cacheName: nil)
+        
+        do {
+            try fetchResultController.performFetch()
+        } catch let error as NSError {
+            print("Error with fetching boozeName \(error)")
+        }
+    }
+}
+
+extension BeerCollectionView {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedBooze = fetchResultController.object(at: indexPath)
+        let index = indexPath
+        //let id = selectedBooze.id
+        boozeName = selectedBooze.boozeName
+        //let selectedBoozeID = selectedBooze.id
+        print(boozeName! as String)
+        performSegue(withIdentifier: "goAndEditSelectedBooze", sender: index)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goAndEditSelectedBooze" {
+            let vc = segue.destination as! UINavigationController
+            let controller = vc.topViewController as! EditBoozeViewController
+            controller.indexPath = sender as! IndexPath?
+        }
+    }
 }
